@@ -251,6 +251,7 @@ h1,h2,h3 {
 .btn {
     display: block;
     padding: 9px 20px;
+    box-sizing: border-box;
     width: 100%;
     font-size: 16px;
     line-height: 20px;
@@ -306,6 +307,62 @@ h1,h2,h3 {
     color: #838789;
 }
 
+.mobile-menu {
+    position: relative;    
+}
+
+.mobile-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.mobile-menu li {
+    display: inline-block;
+    font-size: 0;
+}
+
+.mobile-menu a {
+    display: block;
+    width: 122px;
+    box-sizing: border-box;
+    padding: 10px 15px;
+    font-size: 20px;
+    color: #535657;
+    text-decoration: none;
+}
+
+.mobile-menu a:hover {
+    color: #e6472e;
+}
+
+.sub-menu {
+    position: absolute;
+    display: none;
+    z-index: 30;
+    top: 35px;
+    left: 0px;     
+    list-style: none;
+    margin:0;
+    padding: 0;     
+    font-size: 18px;
+    background-color: #fafafa;     
+}
+
+
+.mobile-menu .menu:hover .sub-menu {
+    display: block;
+}
+
+.sub-menu li {
+    display: block;
+    width: 300px;
+}
+
+.sub-menu a {
+    width: 300px;
+}
+
 h1 {
     margin: 0;
     margin-bottom: 30px;
@@ -345,6 +402,7 @@ h1 {
 .side-right {
     float: left;
     width: 370px;
+    font-size: 0;
 }
 
 h2 {
@@ -361,12 +419,13 @@ h2 {
 .img-news {
     display: inline-block;
     vertical-align: top;
+    margin-right: 14px;
 }
 
 .news-description {
-    display: inline-block;
+    display: inline-block;    
     vertical-align: top;
-    width: 200px;
+    width: 187px;
 }
 
 .news-description span {    
@@ -663,6 +722,7 @@ h4 {
     background: rgba(0,0,0,0.5);
 }
 
+
 @media only screen and (min-device-width: 320px) and (max-device-width : 767px) {
     body {
         width:320px;        
@@ -674,13 +734,84 @@ h4 {
         display: none;
     }
     
+    .main-navigation {
+        display: none;
+    }
+    
+    .search {
+        width: 300px;
+    } 
+    
+    .header-contacts {
+        margin: 0;
+    }
+    
+    .btn-form {
+        width: 300px;        
+    }
+    
+    .btn {
+        font-size: 21px;
+    }
+    
+    .breadcrumbs {
+        display: none;
+    }
+    
+    .mobile-menu {
+        display: block;
+    }
+    
     .side-left {
         width: 300px;
+    }
+    
+    .side-right {
+        width: 300px;
+    }
+    
+    .img-news {
+        margin-right: 10px;
+    }
+    
+   .img-news img {
+        width: 97px;
+        height: 81px;
+    }
+    
+    .news-description {
+        width: 193px;
     }
     
     .products-item a {
         font-size: 19px;
             
+    }
+    
+    .footer-logo {
+        display: none;
+    }
+    
+    .footer-contacts,.footer-social {
+        width: 300px;
+        margin-left: 28px;
+    }
+    
+    .subscribe {
+        margin-left: 28px;
+    }
+    
+    .footer-copyright {
+        width: 300px;
+        box-sizing: border-box;
+        padding: 10px 13px 8px 27px;
+        font-size: 12px;
+        text-align: center;
+    }
+    
+    .made {
+        width: 100%;
+        text-align: center;
     }
 }
 
