@@ -1,6 +1,5 @@
-body {
-    width: 1920px;
-    margin: 0 auto;
+body {        
+    margin: 0 auto;    
 }
 
 h1,h2,h3 {
@@ -44,9 +43,8 @@ h4 {
     display: none;
 }
 
-.wrap {
-    width: 1170px;
-    margin: 0 auto;
+.wrap {      
+    margin: 0 auto;    
 }
 
 .main-header {
@@ -117,6 +115,7 @@ h4 {
 }
 
 .header-search {
+    position: relative;
     float: left;
     font-size: 0;
 }
@@ -130,7 +129,7 @@ h4 {
 .search {
     display: inline-block;
     vertical-align: top;
-    width: 152px;
+/*    width: 152px;*/
     font-size: 13px;
     border: none;
 }
@@ -408,7 +407,7 @@ h4 {
     float: left;
     margin-right: 50px;
     width: 750px;
-    font-size: 0;
+    font-size: 0;    
 }
 
 .products-item {
@@ -753,12 +752,18 @@ h4 {
 
 @media only screen and (min-device-width: 320px) and (max-device-width : 767px) {
     body {
-        width:320px;        
+        min-width:320px;
+        max-width: 767px;
+        width: 100%;
+        box-sizing: border-box;
     }
     .wrap {
-        width:300px;
+        position: relative;
+        min-width:300px;
+        max-width: 767px;
+        box-sizing: border-box;        
     }
-    
+        
     .language-switching {
         margin-bottom: 6px;
     }
@@ -766,12 +771,12 @@ h4 {
     .index-slider {
         display: none;
     }
-    
+        
     .header-social {
         position: absolute;
         top:0;
         left: 100%;
-        margin-left: -110px;
+        margin-left: -105px;
     }
     
     .social-btn-skype {
@@ -781,33 +786,38 @@ h4 {
     .main-navigation {
         display: none;
     }
-    
-    .form-search {
-        position: relative;        
+     
+    .header-search {
+        display: block;
+        width: 99%;        
+        box-sizing: border-box;        
     }
     
-    .search {        
-        width: 300px;
+    .search { 
+        display: block;
+        width: 100%;
+        min-width: 300px;
         padding: 10px 10px;
         box-sizing: border-box;
-        background-color: #dfdfdf;
+        background-color: #dfdfdf;        
     } 
     
     .icon-search {
-        position: absolute;
+        position: absolute;        
         top:0;
         left: 100%;        
         margin-top: 10px;
-        margin-left: -27px;
-        width: 30px;
+        margin-left: -9%;
+        width: 10%;
+        box-sizing: border-box;
         background-color: #dfdfdf;
         background: url(../img/icon-magnifier.png) no-repeat 5px 0;
         border-left: 1px solid #9a9a9a;        
     }
-     
-    
-    
+        
     .header-contacts {
+        display: block;
+        float: right;
         margin: 0;
     }
     
@@ -816,7 +826,8 @@ h4 {
     }
     
     .btn-form {
-        width: 300px;        
+        width: 100%; 
+        box-sizing: border-box;
     }
     
     .btn {
@@ -832,15 +843,16 @@ h4 {
     }
     
     .side-left {
-        width: 300px;
+        width: 100%;
     }
     
     .side-right {
-        width: 300px;
+        width: 100%;
+        box-sizing: border-box;
     }
     
     .img-news {
-        margin-right: 10px;
+        margin-right: 3%;
     }
     
    .img-news img {
@@ -849,21 +861,25 @@ h4 {
     }
     
     .news-description {
-        width: 193px;
+        width: 64.3%;
     }
     
     .products-item a {
         font-size: 19px;            
     }
-     
+    
+    .footer-social-phone {
+        padding-left: 9.3%;
+    }
+    
+    
     .footer-documentation .desktop {
         display: none;
     }
-        
-      
+              
     .footer-logo {
         display: none;
-        margin-right: 12px;
+        margin-right: 0px;
     }
     
     .contacts-item:nth-child(3) {
@@ -871,16 +887,17 @@ h4 {
     }
     
     .footer-contacts,.footer-social {
-        width: 300px;
-        margin-left: 28px;
+        width: 100%;
+        box-sizing: border-box;
+/*        margin-left: 9.3%;*/
     }
     
     .subscribe {
-        margin-left: 28px;
+/*        margin-left: 9.3%;*/
     }
     
     .footer-copyright {
-        width: 300px;
+        width: 100%;
         box-sizing: border-box;
         padding: 10px 13px 8px 27px;
         font-size: 12px;
@@ -889,29 +906,47 @@ h4 {
     
     .made {
         width: 100%;
+        box-sizing: border-box;
         text-align: center;
     }
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width : 1919px) {
     body {
-        width:768px;        
+        min-width: 768px;
+        max-width: 1919px;
+        width: 100%:
     }
     
     .wrap {
-        width:740px;
+        min-width:740px;
+        max-width: 1169px;
+        width: 100%;
+    }
+    
+    .header-search {
+        width: 20%;
+    }
+    
+    .search {
+        width: 80%;
     }
     
     .index-slider {
         display: none;
     }
     
-    .main-menu {
-        width: 
+    .header-lower {
+        text-align: center;
     }
     
+    
     .main-navigation {
-        width: 410px;
+        width: 53.3%;
+    }
+    
+    .main-menu {
+        text-align: center;
     }
     
     .main-menu li:after {      
@@ -923,9 +958,6 @@ h4 {
         display: none;
     }
     
-    .search {
-        width: 80px;
-    }
     
     .social-btn-skype {
         display: none;
@@ -943,12 +975,18 @@ h4 {
         display: block;
     }
     
+    .side-left {
+        width: 100%;
+    }
+    
     .side-right {
-        width: 740px;
+        width: 100%;
+        box-sizing: border-box;
+        padding-left: 10px;
     }
     
     .news-description {
-        width: 580px;
+        width: 78.3%;
     }
     
     .footer-documentation .desktop {
@@ -958,11 +996,36 @@ h4 {
 
 
 @media only screen and (min-device-width: 1920px) {
-    body {
-        width:1920px;        
+    body { 
+        width: 100%;
     }
-    .wrap {
-        width:1170px;
+    .wrap {        
+        width: 100%;
+        min-width: 1170px;
+    }
+    
+    .main-navigation {
+        width: 53.3%;
+    }
+    
+    .header-lower {
+        text-align: center;
+    }
+    
+    .side-left {
+        max-width: 750px;
+        width: 47%;
+    }
+    
+    .side-right {
+        min-width: 335px;
+        width: 47%;
+        box-sizing: border-box;
+        padding-left: 10px;
+    }
+    
+     .news-description {
+        width: 80%;
     }
     
     .footer-documentation .tablet {
@@ -970,6 +1033,7 @@ h4 {
     }
     
     .footer-contacts, .footer-social {
+        width: 30%;
         padding-right: 15px;
         margin-right: 35px;
         border-right: 1px solid #dfdfdf;
