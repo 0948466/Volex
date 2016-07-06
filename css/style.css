@@ -370,7 +370,8 @@ h4 {
     padding: 15px 0;       
     background-color: #fafafa; 
     border-top: 2px solid #dedede; 
-    font-size: 0;    
+    font-size: 0; 
+    box-shadow: 0 3px 3px 0 rgba(128,128,128,0.64);
 }
 
 .icon-pruducts-desktop {
@@ -405,6 +406,65 @@ h4 {
 }
 
 .sub-menu-products-desktop a:nth-child(2n) {
+    width: 100%;
+    box-sizing: border-box;
+    display: block;
+    padding-left: 27%;
+    text-align: left;
+}
+
+.tablet {
+    position: relative;
+}
+
+.tablet .sub-menu-products-tablet {
+    position: absolute;
+    z-index: 30;
+    top: 44px;
+    left: 0px;  
+    width: 100%;    
+    box-sizing: border-box;
+    list-style: none;
+    margin: 0;
+    padding: 15px 0;       
+    background-color: #fafafa; 
+    border-top: 2px solid #dedede; 
+    font-size: 0; 
+    box-shadow: 0 3px 3px 0 rgba(128,128,128,0.64);
+}
+
+.icon-pruducts-tablet {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 10%;
+}
+
+.icon-pruducts-tablet a {
+    border: none;
+}
+
+.menu-products-tablet:hover .sub-menu-products-tablet {
+    display: block;
+}
+
+.sub-menu-products-tablet li {
+    position: relative;    
+    width: 20%;
+    box-sizing: border-box;
+    font-size: 14px;
+    border-right: 1px solid  #dcdcdc;
+}
+
+.sub-menu-products-tablet li:after {
+    display: none;
+}
+
+.sub-menu-products-tablet a {    
+    font-size: 14px;    
+}
+
+.sub-menu-products-tablet a:nth-child(2n) {
     width: 100%;
     box-sizing: border-box;
     display: block;
@@ -641,6 +701,10 @@ h4 {
 }
 
 .footer-documentation li:last-child:after {
+    display: none;
+}
+
+.footer-documentation li:nth-child(5):after {
     display: none;
 }
 
