@@ -129,7 +129,6 @@ h4 {
 .search {
     display: inline-block;
     vertical-align: top;
-/*    width: 152px;*/
     font-size: 13px;
     border: none;
 }
@@ -208,12 +207,15 @@ h4 {
     display: inline-block;
     vertical-align: top;
     width: 41px;
-    height: 41px;
-    margin-right: 1px;
+    height: 41px;    
     vertical-align: top;
     background: rgba(0,0,0,0.3);
     cursor: pointer;
 }
+.slider-controls label:first-child {
+    margin-right: 2px;    
+}
+
 
 .slider-controls label::before,
 .slider-controls label::after {
@@ -308,20 +310,20 @@ h4 {
 
 .breadcrumbs {
     margin-bottom: 50px;
-    text-align: center;
-    padding: 10px 0;
+    text-align: center;    
 }
 
 .breadcrumbs ul {
     list-style: none;
-    margin: 0;
-    padding: 0;
+    margin: 0;    
+    padding:0;
+    font-size: 0;
 }
 
 .breadcrumbs ul li {
-    display: inline-block;
-    vertical-align: top;
-    color: #fff;
+    display: inline-block;    
+    vertical-align: top;   
+    padding: 10px 0;
     font-size: 14px;
     line-height: 16px;    
 }
@@ -329,7 +331,7 @@ h4 {
 .breadcrumbs li:after {
     content: '|';
     margin-left: 17px;
-    color:  #747474;
+    color:  #dcdcdc;
     margin-right: 20px;
 }
 
@@ -341,7 +343,7 @@ h4 {
     text-decoration: none;
     font-size: 16px;
     line-height: 24px;
-    color: #838789;
+    color: #838789;    
 }
 
 .breadcrumbs li:first-child:after {
@@ -352,24 +354,34 @@ h4 {
     color: #e6472e;
 }
 
-
-.desktop .menu-products-desktop {
+.desktop {
     position: relative;
 }
 
 .desktop .sub-menu-products-desktop {
     position: absolute;
-/*    display: none;*/
     z-index: 30;
-    top: 46px;
+    top: 44px;
     left: 0px;  
-    width: 100%;
+    width: 100%;    
     box-sizing: border-box;
     list-style: none;
     margin: 0;
     padding: 15px 0;       
     background-color: #fafafa; 
-    border-top: 1px solid #dedede;    
+    border-top: 2px solid #dedede; 
+    font-size: 0;    
+}
+
+.icon-pruducts-desktop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 10%;
+}
+
+.icon-pruducts-desktop a {
+    border: none;
 }
 
 .menu-products-desktop:hover .sub-menu-products-desktop {
@@ -377,16 +389,26 @@ h4 {
 }
 
 .sub-menu-products-desktop li {
-    position: relative;
+    position: relative;    
+    width: 20%;
+    box-sizing: border-box;
     font-size: 14px;
+    border-right: 1px solid  #dcdcdc;
+}
+
+.sub-menu-products-desktop li:after {
+    display: none;
 }
 
 .sub-menu-products-desktop a {    
-    font-size: 14px;
+    font-size: 14px;    
 }
 
 .sub-menu-products-desktop a:nth-child(2n) {
-    margin-left: 27%;
+    width: 100%;
+    box-sizing: border-box;
+    display: block;
+    padding-left: 27%;
     text-align: left;
 }
 
@@ -1013,11 +1035,6 @@ h4 {
     .footer-contacts,.footer-social {
         width: 100%;
         box-sizing: border-box;
-/*        margin-left: 9.3%;*/
-    }
-    
-    .subscribe {
-/*        margin-left: 9.3%;*/
     }
     
     .footer-copyright {
